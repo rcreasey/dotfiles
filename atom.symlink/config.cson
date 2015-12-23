@@ -28,8 +28,8 @@
     projectHome: "/Users/rcreasey/projects"
     audioBeep: false
     themes: [
-      "atom-material-ui"
-      "atom-dark-syntax"
+      "nucleus-dark-ui"
+      "batman-syntax"
     ]
   "tree-view":
     hideIgnoredNames: true

@@ -20,9 +20,9 @@ git_dirty() {
   else
     if [[ $($git status --porcelain) == "" ]]
     then
-      echo "%F{075}(branch:$(git_prompt_info)$(need_push))%{$reset_color%}"
+      echo "%F{075}(branch:$(git_prompt_info)$(need_push)%F{075})%{$reset_color%}"
     else
-      echo "%F{075}(branch:$(git_prompt_info)%F{214}*%F{075}$(need_push))%{$reset_color%}"
+      echo "%F{075}(branch:$(git_prompt_info)%F{214}*$(need_push)%F{075})%{$reset_color%}"
     fi
   fi
 }
@@ -42,7 +42,7 @@ need_push () {
   then
     echo ""
   else
-    echo "%{$fg[red]%}‡%{$reset_color%}"
+    echo "%{$fg[red]%}⨯%{$reset_color%}"
   fi
 }
 
@@ -53,7 +53,7 @@ directory_name() {
 export PROMPT=$'$(directory_name)$(git_dirty)%F{105} »%{$reset_color%} '
 
 set_prompt () {
-  export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
+  export RPROMPT="%{$reset_color%}"
 }
 
 precmd() {

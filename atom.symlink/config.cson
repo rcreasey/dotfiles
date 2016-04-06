@@ -1,47 +1,42 @@
 "*":
-  "exception-reporting":
-    userId: "0b648289-21f3-1f16-0e7e-54bb09766d84"
-  "release-notes":
-    viewedVersion: "0.85.0"
-  welcome:
-    showOnStartup: false
-  metrics:
-    userId: "3b7d48b8ce32af910c189bb07b70ae6d2c8aa184"
-  editor:
-    fontFamily: "Hack"
-    showIndentGuide: true
-    invisibles: {}
-    fontSize: 12
-    preferredLineLength: 120
+  "atom-beautify":
+    _analyticsUserId: "e190cedf-2122-4b93-923c-533aa2ca0a06"
+  "autocomplete-python":
+    addBracketAfterFunction: true
+    addDotAfterModule: true
+    useSnippets: "all"
   core:
+    audioBeep: false
+    disabledPackages: [
+      "term"
+      "atom-lint"
+      "deprecation-cop"
+    ]
     ignoredNames: [
       ".git"
       ".svn"
       ".DS_Store"
       "*.pyc"
     ]
-    disabledPackages: [
-      "term"
-      "atom-lint"
-      "deprecation-cop"
-    ]
     projectHome: "/Users/rcreasey/projects"
-    audioBeep: false
     themes: [
-      "nucleus-dark-ui"
-      "batman-syntax"
+      "one-dark-ui"
+      "seti-syntax"
     ]
-  "tree-view":
-    hideIgnoredNames: true
-  whitespace:
-    removeTrailingWhitespace: false
-  minimap:
-    plugins:
-      selection: true
-      "git-diff": true
-      "find-and-replace": true
-  "atom-beautify":
-    _analyticsUserId: "e190cedf-2122-4b93-923c-533aa2ca0a06"
+  editor:
+    fontFamily: "Hack"
+    fontSize: 12
+    invisibles: {}
+    preferredLineLength: 120
+    showIndentGuide: true
+    showInvisibles: true
+    tabLength: 4
+    tabType: "soft"
+  "exception-reporting":
+    userId: "0b648289-21f3-1f16-0e7e-54bb09766d84"
+  "file-icons": {}
+  "filetype-color":
+    enabled: "false"
   linter:
     lintDebug: true
     showErrorInline: true
@@ -50,14 +45,6 @@
     ]
   "linter-jshint":
     jshintExecutablePath: "/usr/local/bin/jshint"
-  "filetype-color":
-    enabled: "false"
-  "tool-bar":
-    position: "Left"
-  "autocomplete-python":
-    addBracketAfterFunction: true
-    addDotAfterModule: true
-    useSnippets: "all"
   "linter-pep8":
     ignoreErrorCodes: [
       "E126"
@@ -69,5 +56,33 @@
     maxLineLength: 120
     pep8ExecutablePath: "/usr/local/var/pyenv/shims/pep8"
   "linter-python-pep8":
-    pep8DirToExecutable: "/usr/local/var/pyenv/shims/pep8"
     ignoreErrorCodes: "E126, E402, E501, E701, W292"
+    pep8DirToExecutable: "/usr/local/var/pyenv/shims/pep8"
+  metrics:
+    userId: "3b7d48b8ce32af910c189bb07b70ae6d2c8aa184"
+  "metro-ui":
+    theme: "Adaptive Light"
+    themeAccentColor:
+      alpha: 1
+      blue: 216
+      green: 99
+      red: 7
+  minimap:
+    absoluteMode: true
+    plugins:
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      selection: true
+      selectionDecorationsZIndex: 0
+  "release-notes":
+    viewedVersion: "0.85.0"
+  "tool-bar":
+    position: "Left"
+  "tree-view":
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    removeTrailingWhitespace: false

@@ -10,3 +10,4 @@ then
 fi
 
 alias dm="docker-machine"
+alias apu="apm update --no-confirm"

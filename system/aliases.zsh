@@ -11,3 +11,4 @@ fi
 
 alias dm="docker-machine"
 alias apu="apm update --no-confirm"
+alias docker-purge="docker rm -f $(docker ps -qa); docker rmi -f $(docker images -qa)"

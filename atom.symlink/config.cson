@@ -18,6 +18,7 @@
       "term"
       "atom-lint"
       "deprecation-cop"
+      "metrics"
     ]
     ignoredNames: [
       ".git"

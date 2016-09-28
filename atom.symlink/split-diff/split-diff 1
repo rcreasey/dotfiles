@@ -1,0 +1,96 @@
+pool {
+  name: "DEV Environment Meta"
+  name_replace: "DEV$1-ENVIRONMENT"
+  findFilter: "^DEV(7\\d)-ALL"
+  findFilter: "^DEV(7\\d)-GAMESERVICE"
+  findFilter: "^dev(7\\d)-hardware"
+  findFilter: "^DEV(7\\d)-OLYMPUS"
+}
+
+pool {
+  name: "DEV All Service Meta"
+  name_replace: "DEV$1-ALL-SERVICES"
+  findFilter: "^DEV(7\\d)-\\w+(?:-\\d+)?-[^\\d\\-]*"
+}
+
+pool {
+  name: "DEV Gameservice Meta"
+  name_replace: "DEV$1-GAMESERVICE"
+  findFilter: "^DEV(7\\d)-BN-(?:BACK|FRONT|OBERON|MINION|ODDJOB|PORT|RISKAUTH|RISKMETER|SOCIAL|WARDEN)"
+  findFilter: "^DEV(7\\d)-D3-(?:MATCHBATCH|MATCHCOOP)"
+  findFilter: "^DEV(7\\d)-WTCG-(?:MATCHBATCH|MATCHCOOP)"
+}
+
+pool {
+  name: "DEV Olympus Meta"
+  name_replace: "DEV$1-OLYMPUS"
+  findFilter: "^DEV(2|3|6|10|11|2[1-5]|3\\d|4\\d|5\\d|6\\d|7\\d)-(?:CORE|HERO|S2|T1)-.*"
+  findFilter: "^DEV(2|3|6|10|11|2[1-5]|3\\d|4\\d|5\\d|6\\d|7\\d)-DB-(?:GSPIRE|CEREBRATE|KALOTH)(?:\\d+)?"
+  findFilter: "^DEV(2|3|6|10|11|2[1-5]|3\\d|4\\d|5\\d|6\\d|7\\d)-WOW-MASTER\\d+"
+  findFilter: "^DEV(2|3|6|10|11|2[1-5]|3\\d|4\\d|5\\d|6\\d|7\\d)-BN-(?:DEFILER|SCOURGE|SUNKEN|GATEWAY|STARPORT|ROMEO)\\d+"
+}
+
+pool {
+  name: "DEV Hardware Meta"
+  name_replace: "dev$1-hardware"
+  findFilter: "^dev(2|3|6|10|11|2[1-5]|3\\d|4\\d|5\\d|6\\d|7\\d)-.*"
+}
+
+pool {
+  name: "ST Olympus Meta"
+  name_replace: "ST$1-OLYMPUS"
+  findFilter: "^ST([1-5])-(?:CORE|HERO|S2|T1)-.*"
+  findFilter: "^ST([1-5])-DB-(?:GSPIRE|CEREBRATE|KALOTH)(?:\\d+)?"
+  findFilter: "^ST([1-5])-WOW-MASTER\\d+"
+  findFilter: "^ST([1-5])-BN-(?:DEFILER|SCOURGE|SUNKEN|GATEWAY|STARPORT|ROMEO)\\d+"
+}
+
+pool {
+  name: "BN5/12 Olympus Meta"
+  name_replace: "BN$1-$2-OLYMPUS"
+  findFilter: "^BN(5|12)-(?:CORE|HERO|S2|T1)-(\\d+)-.*"
+  findFilter: "^BN(5|12)-DB-(\\d+)-(?:GSPIRE|CEREBRATE|KALOTH)(?:\\d+)?"
+  findFilter: "^BN(5|12)-WOW-(\\d+)-MASTER\\d+"
+  findFilter: "^BN(5|12)-BN-(\\d+)-(?:DEFILER|SCOURGE|SUNKEN|GATEWAY|STARPORT|ROMEO)\\d+"
+}
+
+pool {
+  name: "XX Olympus Meta"
+  name_replace: "XX-$1-OLYMPUS"
+
+  findFilter: "^XX-(?:CORE|HERO|S2|T1)-(\\d+)-.*"
+  findFilter: "^XX-DB-(\\d+)-(?:GSPIRE|CEREBRATE|KALOTH)(?:\\d+)?"
+  findFilter: "^XX-WOW-(\\d+)-MASTER\\d+"
+  findFilter: "^XX-BN-(\\d+)-(?:DEFILER|SCOURGE|SUNKEN|GATEWAY|STARPORT|ROMEO)\\d+"
+  findFilter: "^(?:USX|EUX|KRX|AMSX|AUXX|CNX|SGX)-HERO-(\\d+)-GAME"
+  findFilter: "^(?:USX|EUX|KRX|AMSX|AUXX|CNX|SGX)-S2-(\\d+)-GAME"
+}
+
+pool {
+  name: "CXX Olympus Meta"
+  name_replace: "CXX-OLYMPUS"
+
+  findFilter: "^CXX-(?:CORE|HERO|S2|T1)-.*\\d+"
+  findFilter: "^CXX-DB-(?:GSPIRE|CEREBRATE|KALOTH)(?:\\d+)?"
+  findFilter: "^CXX-BN-(?:DEFILER|SCOURGE|SUNKEN|GATEWAY|STARPORT|ROMEO)\\d+"
+  findFilter: "^CXX-WOW-MASTER\\d+"
+}
+
+pool {
+  name: "Olympus Maintenance Meta"
+  name_replace: "$1-OLYMPUS-MAINTENANCE-NEW"
+
+  findFilter: "^(CN|CXX|EU|KR|SG|US)(?:\\d*)-(?:CORE|HERO|S2|T1)-(?:\\d+-)?(?:(?!GAME)[A-Z]+)\\d+"
+  findFilter: "^(CN|CXX|EU|KR|SG|US)(?:\\d*)-DB-(?:\\d+-)?(?:GSPIRE|CEREBRATE|KALOTH)(?:\\d+)?"
+  findFilter: "^(CN|CXX|EU|KR|SG|US)(?:\\d*)-WOW-(?:\\d+-)?MASTER\\d+"
+  findFilter: "^(CN|CXX|EU|KR|SG|US)(?:\\d*)-BN-(?:\\d+-)?(?:DEFILER|SCOURGE|SUNKEN|GATEWAY|STARPORT|ROMEO)\\d+"
+}
+
+pool {
+  name: "Metapool - Olympus Maintenance"
+  name_replace: "$1-OLYMPUS-MAINTENANCE"
+  description: "Olympus Service Maintenance Pool"
+  findFilter: "^(CN|EU|KR|SG|US|DR)(?:\\d+)?-(?:BN|T1|CORE|HERO|S2|WOW)-(?:ACHIEVEMENT|BATTLEPAY|CLUBS|CONFERENCE|CUSTOMGAMES|FACEBOOK|GATEWAY|LADDER|PATCH|PYLON|ROMEO|ROUTER|SCOURGE|STARPORT|STUN|SUNKEN|TOURNAMENT|IGRPORT|RECRUIT|UTIL|(?<!BN-)MASTER)\\d\\d-\\d\\d$"
+  findFilter: "^(CN|EU|KR|SG|US|DR)(?:\\d+)?-(?:BN|T1|CORE|HERO|S2|WOW)-(?:ACHIEVEMENT|BATTLEPAY|CLUBS|CONFERENCE|CUSTOMGAMES|FACEBOOK|GATEWAY|LADDER|PYLON|ROMEO|ROUTER|SCOURGE|STARPORT|STUN|SUNKEN|TOURNAMENT|IGRPORT|RECRUIT|UTIL|(?<!BN-)MASTER)\\d\\d$"
+  findFilter: "^(CN|EU|KR|SG|US|DR)(?:\\d+)?-(?:BN|T1|CORE|HERO|S2|WOW)-\\d\\d-(?:ACHIEVEMENT|BATTLEPAY|CLUBS|CONFERENCE|CUSTOMGAMES|FACEBOOK|GATEWAY|LADDER|PYLON|ROMEO|ROUTER|SCOURGE|STARPORT|STUN|SUNKEN|TOURNAMENT|IGRPORT|RECRUIT|UTIL|(?<!BN-\\d\\d-)MASTER)\\d\\d$"
+}

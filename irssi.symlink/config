@@ -2,9 +2,7 @@ servers = (
   {
     address = "irc.freenode.net";
     chatnet = "freenode";
-    port = "6667";
-    autoconnect = "no";
-    nick = "rcreasey";
+    port = "8000";
   }
 );
 
@@ -188,9 +186,7 @@ settings = {
   };
 };
 logs = { };
-ignores = (
-  { level = "JOINS PARTS QUITS"; }
-);
+ignores = ( { level = "JOINS PARTS QUITS"; } );
 keyboard = (
   { key = "meta-1"; id = "change_window"; data = "1"; },
   { key = "meta-2"; id = "change_window"; data = "2"; },

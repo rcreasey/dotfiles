@@ -36,8 +36,6 @@
       "atom-lint"
       "deprecation-cop"
       "metrics"
-      "linter-pep8"
-      "linter-python-pep8"
     ]
     ignoredNames: [
       ".git"
@@ -78,19 +76,15 @@
     ]
   "linter-jshint":
     jshintExecutablePath: "/usr/local/bin/jshint"
-  "linter-pep8":
+  "linter-pycodestyle":
+    executablePath: "/usr/local/var/pyenv/shims/pycodestyle"
     ignoreErrorCodes: [
       "E126"
+      "E128"
       "E402"
-      "E501"
-      "E701"
       "W292"
     ]
     maxLineLength: 120
-    pep8ExecutablePath: "/usr/local/var/pyenv/shims/pep8"
-  "linter-python-pep8":
-    ignoreErrorCodes: "E126, E402, E501, E701, W292"
-    pep8DirToExecutable: "/usr/local/var/pyenv/shims/pep8"
   metrics:
     userId: "3b7d48b8ce32af910c189bb07b70ae6d2c8aa184"
   "metro-ui":

@@ -10,6 +10,7 @@ then
 fi
 
 alias dm="docker-machine"
+alias db="docker build -t \"${PWD##*/}\" ."
 alias apu="apm update --no-confirm"
 alias docker-purge="docker rm -f $(docker ps -qa); docker rmi -f $(docker images -qa)"
 alias tectonic-connect='kubectl get pods -l tectonic-app=console -o template --template="{{range.items}}{{.metadata.name}}{{end}}" | xargs -i{} kubectl port-forward {} 9000'

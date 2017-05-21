@@ -7,10 +7,21 @@
       totalCount: {}
     screenShake: {}
   "atom-beautify":
-    _analyticsUserId: "e190cedf-2122-4b93-923c-533aa2ca0a06"
+    general:
+      _analyticsUserId: "e190cedf-2122-4b93-923c-533aa2ca0a06"
+    json:
+      beautify_on_save: true
+      brace_style: "expand"
+      end_with_comma: true
+      end_with_newline: true
+      eval_code: true
+      indent_with_tabs: false
+      jslint_happy: true
+      space_in_paren: true
   "atom-material-ui":
     colors:
       abaseColor: "#607d8b"
+      accentColor: "#b27252"
       genAccent: true
       paintCursor: true
       predefinedColor: "Blue Grey"
@@ -68,9 +79,7 @@
     general:
       _analyticsUserId: "5a5b8c71-d88d-4201-8d1c-a6660df4b0b2"
   linter:
-    errorPanelHeight: 46
     lintDebug: true
-    showErrorInline: true
     subtleLinterErrors: [
       "jshint"
     ]
@@ -83,8 +92,11 @@
       "E128"
       "E402"
       "W292"
+      "E722"
     ]
     maxLineLength: 120
+  "linter-ui-default":
+    showPanel: true
   metrics:
     userId: "3b7d48b8ce32af910c189bb07b70ae6d2c8aa184"
   "metro-ui":

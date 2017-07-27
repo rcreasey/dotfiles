@@ -1,0 +1,155 @@
+// TREE VIEW CUSTOM STYLES
+// -----------------------
+.list-group li:not(.list-nested-item), .list-tree li:not(.list-nested-item), .list-group li.list-nested-item > .list-item, .list-tree li.list-nested-item > .list-item {
+  line-height: 25px;
+}
+
+.list-tree.has-collapsable-children .list-nested-item > .list-tree > li, .list-tree.has-collapsable-children .list-nested-item > .list-group > li {
+  padding-left: 14px;
+}
+
+.list-group .selected::before, .list-tree .selected::before {
+  height: 24px;
+}
+
+.list-group .icon::before, .list-tree .icon::before {
+  margin-right: 0.5em;
+}
+
+// `;` opacity
+// -----------
+.syntax--punctuation.syntax--terminator.syntax--statement.syntax--js {
+  color: #FFF;
+  opacity: .3;
+}
+
+// ayu theme custom
+// ----------------
+atom-text-editor,
+.scroll-view,
+.gutter,
+.tree-view {
+  background: #212733 !important;
+}
+
+.tree-view {
+  padding-left: 10px;
+  padding-top: 10px;
+  z-index: 0;
+}
+
+li.list-nested-item.status-ignored > .list-item > span {
+  color: #3e4b59 !important;
+}
+
+li.list-nested-item.collapsed:not(.status-ignored) > .list-item > span {
+  color: #607080 !important;
+}
+
+li.list-nested-item:not(.collapsed) > .list-item > span,
+li.list-item.selected > span {
+  color: #ffffff !important;
+
+  &::before {
+    color: #ffcc66;
+  }
+}
+
+li.list-item.selected::before {
+  border-left: 3px solid #ffcc66;
+}
+
+.amu-tinted-tab-bar .tab-bar .tab.active::after {
+  background: #ffcd5d;
+}
+
+.editor .cursor {
+  border-left-width: 2px;
+  border-color: #ffcd5d !important;
+}
+
+.tab-bar .tab:not(.active) {
+  color: #607080;
+
+  .title[data-path].icon::before {
+    color: #607080 !important;
+  }
+}
+
+// color syntax customization
+// --------------------------
+.syntax--keyword.syntax--control.syntax--module.syntax--js,
+.syntax--storage.syntax--type,
+.syntax--support.syntax--class {
+  color: #ffcd5d;
+}
+
+.syntax--punctuation.syntax--definition.syntax--string.syntax--begin,
+.syntax--punctuation.syntax--definition.syntax--string.syntax--end,
+.syntax--string.syntax--unquoted.syntax--js,
+.syntax--string {
+  color: #bae67e;
+}
+
+.syntax--entity.syntax--name.syntax--function,
+.syntax--variable.syntax--other.syntax--constant {
+  color: #ffd580;
+}
+
+.syntax--variable.syntax--this,
+.syntax--variable.syntax--super {
+  color: #5ccfe6;
+  font-style: italic;
+}
+
+.syntax--meta.syntax--class,
+.syntax--console {
+  color: #5ccfe6;
+}
+
+.syntax--constant {
+  color: #d4bfff;
+}
+
+.syntax--string.syntax--regexp {
+  color: #95e6cb !important;
+}
+
+.syntax--punctuation.syntax--key-value,
+.syntax--variable.syntax--other.syntax--readwrite,
+.syntax--variable.syntax--other.syntax--property,
+.syntax--variable.syntax--other.syntax--object {
+  color: #d9d7ce;
+}
+
+.syntax--comment {
+  color: #5c6773;
+}
+
+.modal.overlay.from-top {
+  background-color: #272d38;
+  top: 25%;
+  width: 700px;
+
+  atom-text-editor .scroll-view {
+    font-size: 1.3em;
+    background: #272d38 !important;
+  }
+
+  .fuzzy-finder .primary-line {
+    font-size: 1.3em;
+
+    &::before {
+      font-size: 1em;
+    }
+
+    .character-match {
+      color: #ffd580;
+    }
+  }
+
+  li.selected {
+    background-color: #343f4c;
+    border-left: 2px solid #ffd580;
+  }
+}

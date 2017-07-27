@@ -1,4 +1,3 @@
 'atom-workspace':
-  'alt-u': 'python-tools:show-usages'
-  'alt-g': 'python-tools:goto-definition'
-  'alt-e': 'python-tools:select-all-string'
+  'alt-g': 'goto-definition:go'
+  'ctrl-g': 'goto-definition:go'

@@ -41,3 +41,6 @@ set-option -g display-panes-colour colour166 #orange
 
 # clock
 set-window-option -g clock-mode-colour colour64 #green
+
+# plugins
+set -g @plugin 'jimeh/tmux-themepack'

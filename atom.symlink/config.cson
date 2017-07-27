@@ -36,6 +36,8 @@
     ui:
       panelContrast: true
       panelShadows: true
+  "atom-package-deps":
+    ignored: []
   "autocomplete-python":
     addBracketAfterFunction: true
     addDotAfterModule: true
@@ -58,7 +60,7 @@
     telemetryConsent: "limited"
     themes: [
       "atom-material-ui"
-      "atom-material-syntax"
+      "atom-dark-fusion-syntax"
     ]
   editor:
     fontFamily: "Hack"
@@ -78,6 +80,8 @@
   "git-plus":
     general:
       _analyticsUserId: "5a5b8c71-d88d-4201-8d1c-a6660df4b0b2"
+  "goto-definition":
+    performanceMode: true
   linter:
     lintDebug: true
     subtleLinterErrors: [
@@ -90,12 +94,15 @@
     ignoreErrorCodes: [
       "E126"
       "E128"
+      "E221"
       "E402"
+      "E501"
       "W292"
       "E722"
     ]
     maxLineLength: 120
   "linter-ui-default":
+    panelHeight: 81
     showPanel: true
   metrics:
     userId: "3b7d48b8ce32af910c189bb07b70ae6d2c8aa184"
@@ -103,7 +110,8 @@
     theme: "Adaptive Light"
     themeAccentColor: "#0763d8"
   minimap:
-    absoluteMode: true
+    adjustAbsoluteModeHeight: true
+    moveCursorOnMinimapClick: true
     plugins:
       "find-and-replace": true
       "find-and-replaceDecorationsZIndex": 0
@@ -113,6 +121,8 @@
       "highlight-selectedDecorationsZIndex": 0
       selection: true
       selectionDecorationsZIndex: 0
+  "nord-atom-ui":
+    darkerFormFocusEffect: true
   "one-dark-ui":
     fontSize: 12
     layoutMode: "Spacious"
@@ -132,8 +142,10 @@
     position: "Left"
   "tree-view":
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
   whitespace:
     removeTrailingWhitespace: false
+".source.yaml":
+  editor:
+    tabLength: 2

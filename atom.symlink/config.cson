@@ -11,13 +11,17 @@
       _analyticsUserId: "e190cedf-2122-4b93-923c-533aa2ca0a06"
     json:
       beautify_on_save: true
-      brace_style: "expand"
+      brace_style: "collapse-preserve-inline"
       end_with_comma: true
       end_with_newline: true
       eval_code: true
       indent_with_tabs: false
       jslint_happy: true
       space_in_paren: true
+  "atom-ide-ui":
+    use:
+      "atom-ide-diagnostics-ui": false
+  "atom-limelight": {}
   "atom-material-ui":
     colors:
       abaseColor: "#607d8b"
@@ -32,7 +36,7 @@
       tintedTabBar: true
     treeView:
       blendTabs: true
-      compactList: true
+      compactList: false
     ui:
       panelContrast: true
       panelShadows: true
@@ -60,16 +64,15 @@
     telemetryConsent: "limited"
     themes: [
       "atom-material-ui"
-      "atom-dark-fusion-syntax"
+      "atom-material-syntax"
     ]
   editor:
     fontFamily: "Hack"
-    fontSize: 13
+    fontSize: 12
     invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true
     showInvisibles: true
-    softTabs: false
     tabLength: 4
     tabType: "soft"
   "exception-reporting":
@@ -82,15 +85,24 @@
       _analyticsUserId: "5a5b8c71-d88d-4201-8d1c-a6660df4b0b2"
   "goto-definition":
     performanceMode: true
+  "ide-python":
+    pylsPlugins:
+      mccabe:
+        enabled: false
+      pycodestyle: {}
+      pyflakes:
+        enabled: true
+      yapf:
+        enabled: true
   linter:
     lintDebug: true
     subtleLinterErrors: [
       "jshint"
     ]
   "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
     jshintExecutablePath: "/usr/local/bin/jshint"
   "linter-pycodestyle":
-    executablePath: "/usr/local/var/pyenv/shims/pycodestyle"
     ignoreErrorCodes: [
       "E126"
       "E128"
@@ -99,10 +111,11 @@
       "E501"
       "W292"
       "E722"
+      "E731"
     ]
     maxLineLength: 120
   "linter-ui-default":
-    panelHeight: 81
+    panelHeight: 195
     showPanel: true
   metrics:
     userId: "3b7d48b8ce32af910c189bb07b70ae6d2c8aa184"
@@ -134,6 +147,7 @@
     leftEditorColor: "red"
     rightEditorColor: "green"
     syncHorizontalScroll: true
+  summon: {}
   "terminal-plus":
     style: {}
     toggles:
@@ -146,6 +160,9 @@
     showOnStartup: false
   whitespace:
     removeTrailingWhitespace: false
+".json.source":
+  editor:
+    autoIndent: true
 ".source.yaml":
   editor:
     tabLength: 2

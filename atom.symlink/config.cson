@@ -20,11 +20,11 @@
       space_in_paren: true
   "atom-material-ui":
     colors:
-      abaseColor: "#607d8b"
-      accentColor: "#b27252"
+      abaseColor: "#7e57c2"
+      accentColor: "#b0e457"
       genAccent: true
       paintCursor: true
-      predefinedColor: "Blue Grey"
+      predefinedColor: "Purple"
     fonts: {}
     tabs:
       compactTabs: true
@@ -59,8 +59,8 @@
     projectHome: "/Users/rcreasey/projects"
     telemetryConsent: "limited"
     themes: [
-      "atom-material-ui"
-      "atom-dark-fusion-syntax"
+      "snazzy-nebula-ui"
+      "batman-syntax"
     ]
   editor:
     fontFamily: "Hack"
@@ -101,9 +101,7 @@
       "E722"
     ]
     maxLineLength: 120
-  "linter-ui-default":
-    panelHeight: 81
-    showPanel: true
+  "linter-ui-default": {}
   metrics:
     userId: "3b7d48b8ce32af910c189bb07b70ae6d2c8aa184"
   "metro-ui":
@@ -128,6 +126,8 @@
     layoutMode: "Spacious"
   "release-notes":
     viewedVersion: "0.85.0"
+  "seti-syntax":
+    themeColor: "Purple"
   "split-diff":
     diffWords: true
     ignoreWhitespace: true

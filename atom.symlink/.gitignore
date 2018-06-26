@@ -1,0 +1,14 @@
+!*.cson
+!*.json
+!*.coffee
+!*.less
+
+.apm
+blob-store
+compile-cache
+packages
+storage
+recovery
+
+packages.list
+

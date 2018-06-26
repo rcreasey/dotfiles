@@ -53,18 +53,29 @@
       "atom-lint"
       "deprecation-cop"
       "metrics"
+      "atom-ide-ui"
+      "ide-typescript"
+      "ide-python"
+      "ide-json"
+      "platformio-ide"
+      "platformio-ide-debugger"
+      "platformio-ide-terminal"
     ]
     ignoredNames: [
       ".git"
       ".svn"
       ".DS_Store"
       "*.pyc"
+      ".pioenvs"
+      ".piolibdeps"
+      ".clang_complete"
+      ".gcc-flags.json"
     ]
     projectHome: "/Users/rcreasey/projects"
     telemetryConsent: "limited"
     themes: [
-      "snazzy-nebula-ui"
-      "batman-syntax"
+      "dracula-ui"
+      "dracula-syntax"
     ]
   editor:
     fontFamily: "Hack"
@@ -77,7 +88,8 @@
     tabType: "soft"
   "exception-reporting":
     userId: "0b648289-21f3-1f16-0e7e-54bb09766d84"
-  "file-icons": {}
+  "file-icons":
+    coloured: false
   "filetype-color":
     enabled: "false"
   "git-plus":
@@ -114,7 +126,8 @@
       "E731"
     ]
     maxLineLength: 120
-  "linter-ui-default": {}
+  "linter-ui-default":
+    useBusySignal: false
   metrics:
     userId: "3b7d48b8ce32af910c189bb07b70ae6d2c8aa184"
   "metro-ui":

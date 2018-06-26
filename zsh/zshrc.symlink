@@ -2,7 +2,7 @@
 export ZSH=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/Code
+export PROJECTS=~/projects
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
@@ -41,4 +41,17 @@ done
 unset config_files
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+(wal -r &)
+
+autoload -U promptinit; promptinit
+
+# Spaceship options
+SPACESHIP_PROMPT_DEFAULT_PREFIX=""
+SPACESHIP_NODE_SHOW=false
+
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
+
 

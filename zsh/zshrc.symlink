@@ -40,12 +40,6 @@ done
 
 unset config_files
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-(wal -r &)
-
-autoload -U promptinit; promptinit
-
 # Spaceship options
 SPACESHIP_PROMPT_DEFAULT_PREFIX=""
 SPACESHIP_NODE_SHOW=false
@@ -54,4 +48,5 @@ SPACESHIP_NODE_SHOW=false
 autoload -U promptinit; promptinit
 prompt spaceship
 
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

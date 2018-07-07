@@ -1,17 +1,17 @@
-# grc overides for ls
-#   Made possible through contributions from generous benefactors like
-#   `brew install coreutils`
-if $(gls &>/dev/null)
-then
-  alias ls="gls -F --color"
-  alias l="gls -lAh --color"
-  alias ll="gls -l --color"
-  alias la='gls -A --color'
-fi
+alias ls="exa"
+alias ll="exa -l"
+alias la="exa -a"
+alias lg="exa --long --grid"
+
+alias tree="exa --tree"
 
 alias dm="docker-machine"
 alias db="docker build -t \"${PWD##*/}\" ."
-alias apu="apm update --no-confirm"
 alias docker-purge="docker rm -f $(docker ps -qa); docker rmi -f $(docker images -qa)"
-alias tectonic-connect='kubectl get pods -l tectonic-app=console -o template --template="{{range.items}}{{.metadata.name}}{{end}}" | xargs -i{} kubectl port-forward {} 9000'
-alias wpu="wal -i $HOME/Pictures/Wallpaper/bokeh -x -o wal-set"
+
+alias apu="apm update --no-confirm"
+alias wpu="wal -i $HOME/Pictures/Wallpaper/pywal"  
+(cat ~/.cache/wal/sequences &)
+
+
+

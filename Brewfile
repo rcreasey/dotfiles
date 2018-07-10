@@ -21,6 +21,7 @@ brew 'unrar'
 brew 'wget'
 brew 'youtube-dl'
 brew 'zsh'
+brew 'zplug'
 
 cask 'adium'
 cask 'alfred'

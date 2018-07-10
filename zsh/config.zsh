@@ -1,19 +1,24 @@
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export PS1='%m:%3~$(git_info_for_prompt)%# '
-# else
-#   export PS1='%3~$(git_info_for_prompt)%# '
-# fi
-# 
-# export LSCOLORS="exfxcxdxbxegedabagacad"
-# export CLICOLOR=true
-# 
-# fpath=($ZSH/functions $fpath)
 
-autoload -U $ZSH/functions/*(:t)
+setopt autocd
+setopt autopushd
+setopt pushd_ignore_dups
+setopt pushd_to_home
 
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+#setopt inc_append_history_time
+HISTFILE=${HOME}/.zsh_history
+HISTSIZE=10000                   # The maximum number of events to save in the internal history.
+SAVEHIST=10000                   # The maximum number of events to save in the history file.
+setopt BANG_HIST                 # Treat the '!' character specially during expansion.
+setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
+setopt HIST_IGNORE_DUPS          # Do not record an event that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete an old recorded event if a new event is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a previously found event.
+setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
+setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 
 setopt NO_BG_NICE # don't nice background tasks
 setopt NO_HUP
@@ -33,16 +38,16 @@ setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share 
 setopt HIST_IGNORE_ALL_DUPS  # don't record dupes in history
 setopt HIST_REDUCE_BLANKS
 
-# don't expand aliases _before_ completion has finished
-#   like: git comm-[tab]
-setopt complete_aliases
+# Completion
+setopt MENU_COMPLETE
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
-zle -N newtab
+# Lists the ten most used commands.
+alias history-stat="history 0 | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
+alias -s log="less -MN"
 
-bindkey '^[^[[D' backward-word
-bindkey '^[^[[C' forward-word
-bindkey '^[[5D' beginning-of-line
-bindkey '^[[5C' end-of-line
-bindkey '^[[3~' delete-char
-bindkey '^[^N' newtab
-bindkey '^?' backward-delete-char
+function f() { find . -name "$1" }
+
+# View HTTP traffic
+alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""

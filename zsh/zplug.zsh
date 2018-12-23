@@ -19,6 +19,8 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-completions"
 
+zplug "glidenote/hub-zsh-completion"
+
 # prompt
 zplug "mafredri/zsh-async", on:sindresorhus/pure
 zplug "sindresorhus/pure", defer:2

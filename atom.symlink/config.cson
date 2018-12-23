@@ -19,8 +19,7 @@
       jslint_happy: true
       space_in_paren: true
   "atom-ide-ui":
-    use:
-      "atom-ide-diagnostics-ui": false
+    use: {}
   "atom-limelight": {}
   "atom-material-ui":
     colors:
@@ -53,13 +52,11 @@
       "atom-lint"
       "deprecation-cop"
       "metrics"
-      "atom-ide-ui"
       "ide-typescript"
       "ide-python"
-      "ide-json"
-      "platformio-ide"
       "platformio-ide-debugger"
       "platformio-ide-terminal"
+      "linter"
     ]
     ignoredNames: [
       ".git"
@@ -84,7 +81,6 @@
     preferredLineLength: 120
     showIndentGuide: true
     showInvisibles: true
-    tabLength: 4
     tabType: "soft"
   "exception-reporting":
     userId: "0b648289-21f3-1f16-0e7e-54bb09766d84"
@@ -171,8 +167,7 @@
     hideIgnoredNames: true
   welcome:
     showOnStartup: false
-  whitespace:
-    removeTrailingWhitespace: false
+  whitespace: {}
 ".json.source":
   editor:
     autoIndent: true

@@ -4,7 +4,7 @@ alias docker-purge="docker rm -f $(docker ps -qa); docker rmi -f $(docker images
 
 alias apu="apm update --no-confirm"
 
-alias wpu="wal -i $HOME/Pictures/Wallpaper/pywal -e"  
+alias wpu="/Users/rcreasey/.dotfiles/system/random-wallpaper.sh"
 test -e "${HOME}/.cache/wal/sequences" && (cat $HOME/.cache/wal/sequences &)
 
 

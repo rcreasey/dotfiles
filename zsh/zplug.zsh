@@ -8,7 +8,7 @@ if zplug check "b4b4r07/enhancd"; then
     export ENHANCD_DOT_SHOW_FULLPATH=1
 fi
 
-zplug "chriskempson/base16-shell", use:"scripts/base16-default-dark.sh", defer:0
+#zplug "chriskempson/base16-shell", use:"scripts/base16-default-dark.sh", defer:0
 zplug "chriskempson/base16-shell", use:colortest, as:command
 
 zplug "chrissicool/zsh-256color"

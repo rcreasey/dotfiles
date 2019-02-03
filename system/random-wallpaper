@@ -1,0 +1,26 @@
+#!/usr/bin/env python
+import os
+import pathlib
+import random
+import requests
+import shutil
+import subprocess
+
+wallpaper_path = os.path.join(pathlib.Path.home(), 'Pictures', 'Wallpaper', 'current.jpg')
+resolution = '1440x900'
+collections = [574331, 2357604]
+
+url = 'https://source.unsplash.com/collection/{0}/{1}'.format(random.choice(collections), resolution)
+print('Downloading {0}\nto {1}'.format(url, wallpaper_path))
+
+response = requests.get(url, stream=True)
+with open(wallpaper_path, 'wb') as out_file:
+    shutil.copyfileobj(response.raw, out_file)
+
+del response
+
+shutil.rmtree(os.path.join(pathlib.Path.home(), '.cache', 'wal'), ignore_errors=True)
+subprocess.call(['wal', '-c'])
+subprocess.call(['wal', '-i', wallpaper_path, '-e', '--vte'])
+subprocess.call(['neofetch', '--clean'])
+subprocess.call(['neofetch', '--backend', 'iterm2'])

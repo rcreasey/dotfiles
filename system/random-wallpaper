@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import logging
 import os
 import pathlib
 import random
@@ -6,12 +7,15 @@ import requests
 import shutil
 import subprocess
 
+
+logging.basicConfig(level=logging.INFO, format="%(message)s")
+
 wallpaper_path = os.path.join(pathlib.Path.home(), 'Pictures', 'Wallpaper', 'current.jpg')
 resolution = '1440x900'
-collections = [574331, 2357604]
+collections = [2357604, 3508426]
 
 url = 'https://source.unsplash.com/collection/{0}/{1}'.format(random.choice(collections), resolution)
-print('Downloading {0}\nto {1}'.format(url, wallpaper_path))
+logging.info('Downloading {0}\nto {1}'.format(url, wallpaper_path))
 
 response = requests.get(url, stream=True)
 with open(wallpaper_path, 'wb') as out_file:

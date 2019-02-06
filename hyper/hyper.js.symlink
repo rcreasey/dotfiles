@@ -1,7 +1,7 @@
 module.exports = {
     config: {
         updateChannel: 'stable',
-        fontSize: 13,
+        fontSize: 12,
         fontFamily: 'Hack, monospace',
         fontWeight: 'normal',
         fontWeightBold: 'bold',
@@ -29,8 +29,7 @@ module.exports = {
     plugins: [
         "hyper-pane",
         "hyper-search",
-        "hyper-opacity",
-        "hyper-wal"
+        "hyper-opacity"
     ],
 
     opacity: 0.85,

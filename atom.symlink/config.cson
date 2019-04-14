@@ -123,6 +123,7 @@
     ]
     maxLineLength: 120
   "linter-ui-default":
+    panelHeight: 300
     useBusySignal: false
   metrics:
     userId: "3b7d48b8ce32af910c189bb07b70ae6d2c8aa184"

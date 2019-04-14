@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO, format="%(message)s")
 
 wallpaper_path = os.path.join(pathlib.Path.home(), 'Pictures', 'Wallpaper', 'current.jpg')
 resolution = '1440x900'
-collections = [2357604, 3508426]
+collections = [4238300, 1988392]
 
 url = 'https://source.unsplash.com/collection/{0}/{1}'.format(random.choice(collections), resolution)
 logging.info('Downloading {0}\nto {1}'.format(url, wallpaper_path))

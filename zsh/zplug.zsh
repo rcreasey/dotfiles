@@ -12,6 +12,7 @@ zplug "chriskempson/base16-shell", use:colortest, as:command
 
 zplug "chrissicool/zsh-256color"
 zplug "supercrabtree/k"
+zplug "tarrasch/zsh-bd"
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2

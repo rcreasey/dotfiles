@@ -51,3 +51,6 @@ function f() { find . -name "$1" }
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+bindkey    "^[[3~"          delete-char
+bindkey    "^[3;5~"         delete-char

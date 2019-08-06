@@ -7,12 +7,10 @@ if zplug check "b4b4r07/enhancd"; then
     export ENHANCD_FILTER="fzf --height 50% --reverse --ansi"
     export ENHANCD_DOT_SHOW_FULLPATH=1
 fi
-
-zplug "chriskempson/base16-shell", use:colortest, as:command
+zplug "tarrasch/zsh-bd"
 
 zplug "chrissicool/zsh-256color"
 zplug "supercrabtree/k"
-zplug "tarrasch/zsh-bd"
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
@@ -20,6 +18,15 @@ zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-completions"
 
 zplug "glidenote/hub-zsh-completion"
+
+#zplug "nnao45/zsh-kubectl-completion"
+zplug "ahmetb/kubectx", use:kubectx, as:command
+zplug "ahmetb/kubectx", use:kubens, as:command
+zplug "johanhaleby/kubetail"
+zplug "plugins/kubectl", from:oh-my-zsh, defer:2
+zplug "bonnefoa/kubectl-fzf", defer:3
+#zplug "greymd/docker-zsh-completion"
+#zplug "webyneter/docker-aliases"
 
 # prompt
 zplug "mafredri/zsh-async", on:sindresorhus/pure

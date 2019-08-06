@@ -29,7 +29,8 @@ module.exports = {
     plugins: [
         "hyper-pane",
         "hyper-search",
-        "hyper-opacity"
+        "hyper-opacity",
+        "hyper-wal"
     ],
 
     opacity: 0.85,
